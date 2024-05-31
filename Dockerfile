@@ -1,12 +1,12 @@
-FROM node
+FROM node:20.12.2
 
 WORKDIR /src
 
-COPY package*.json .
+COPY package*.json /src
 
 RUN npm install
 
-COPY . .
+COPY . /src
 
 EXPOSE 3000
 
